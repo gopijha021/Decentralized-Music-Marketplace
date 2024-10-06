@@ -49,6 +49,57 @@ Rinkeby Test Ether: You need some test Ether on the Rinkeby network. You can get
  now the smart contract is deployed you can see it in rinkeby .
 
 
+  **Test User Registration as Listener**
+Step 1: Call registerUser
+
+In the Deployed Contracts section, find your deployed contract.
+Open the registerUser function.
+For _isArtist, enter false (since this will register as a listener).
+Click transact to execute the registration.
+
+
+Step 2: Register as an Artist
+
+Switch to another wallet account in Remix (top right corner).
+Call the registerUser function with _isArtist set to true to register as an artist.
+Verify the registration as in the previous step (use the artist's address).
+
+ **Test Song Upload (Artist Only)**
+
+ 
+While using the artist's wallet account, call the uploadSong function with appropriate parameters:
+_title: The name of the song (e.g., "Song A").
+_price: The price of the song in Wei (e.g., 1000000000000000000 for 1 Ether).
+_songHash: A hash of the song (you can generate a random hash for testing, e.g., 0x123456...).
+Verify the song upload by calling the songs function with songId = 1. It should return the song details.
+
+**Test Donation to Artist**
+
+
+While still using the listener's account, call the donateToArtist function:
+_artist: The artist's address.
+Value: The amount of Ether you want to donate.
+Verify the donation by checking the artist's balance in the Remix IDE's "Accounts" section (the balance should increase by the donation amount).
+
+
+**Test Song Purchase (Listener Only)**
+
+
+Switch back to the listener's account.
+Ensure you have enough Ether to purchase the song. Call the purchaseSong function with:
+_songId: The ID of the song you want to purchase (e.g., 1).
+Value (in Wei): The exact price of the song (set in the uploadSong function).
+Verify the purchase by checking the songPurchased mapping with the listener's address and songId. It should return true.
+
+
+**Test Getting Song Details**
+
+
+Call the getSong function with a songId (e.g., 1).
+Verify the returned song details (title, price, artist, and songHash) match the uploaded song.
+
+
+
  BY USING HARDHAT OR TRUFFLE 
 
  you can also deployed it using hardhat or truffle 
