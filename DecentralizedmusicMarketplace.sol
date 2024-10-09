@@ -11,7 +11,7 @@ contract DecentralizedMusicMarketplace {
     }
 
     struct User {
-        bool isArtist;
+        bool isArtist; //to specify between artist and listener 
         bool isRegistered;
     }
 
