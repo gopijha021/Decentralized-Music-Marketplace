@@ -15,8 +15,8 @@ contract DecentralizedMusicMarketplace {
 
     // Structure representing a User
     struct User {
-        bool isArtist;          // Indicates if the user is an artist
-        bool isRegistered;      // Indicates if the user is registered
+        bool isArtist;          
+        bool isRegistered;      
     }
 
     // Counter for tracking the total number of songs uploaded
