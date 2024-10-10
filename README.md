@@ -60,7 +60,7 @@ Click transact to execute the registration.
 
 Step 2: Register as an Artist
 
-Switch to another wallet account in Remix (top right corner).
+Switch to another wallet account in Remix.
 Call the registerUser function with _isArtist set to true to register as an artist.
 Verify the registration as in the previous step (use the artist's address).
 
